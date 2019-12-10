@@ -1,3 +1,6 @@
-main(){
-  print('Hello World!');
+main() {
+  var string = 'Hello World!';
+  var number = 2;
+
+  print(string);
 }
