@@ -6,19 +6,19 @@ main() {
 
 calculateIMC() {
   print('Digite o seu peso: ');
-  var textWeight = stdin.readLineSync();
-  var weight = int.parse(textWeight);
+  String textWeight = stdin.readLineSync();
+  int weight = int.parse(textWeight);
 
   print('Digite a sua altura: ');
-  var textHeigth = stdin.readLineSync();
-  var heigth = double.parse(textHeigth);
+  String textHeigth = stdin.readLineSync();
+  double heigth = double.parse(textHeigth);
 
-  var imc = weight / (heigth * heigth);
+  double imc = weight / (heigth * heigth);
 
   printIMC(imc);
 }
 
-printIMC(imc) {
+printIMC(double imc) {
   if (imc < 18.5) {
     print("Abaixo do Peso");
   } else if (imc > 18.5 && imc < 24.9) {
