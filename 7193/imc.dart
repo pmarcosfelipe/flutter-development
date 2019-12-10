@@ -10,10 +10,10 @@ calculateIMC() {
   int weight = int.parse(textWeight);
 
   print('Digite a sua altura: ');
-  String textHeigth = stdin.readLineSync();
-  double heigth = double.parse(textHeigth);
+  String textheight = stdin.readLineSync();
+  double height = double.parse(textheight);
 
-  double imc = weight / (heigth * heigth);
+  double imc = calculatingIMC(weight, height);
 
   printIMC(imc);
 }
@@ -32,4 +32,8 @@ printIMC(double imc) {
   } else {
     print("Obesidade Grau 3");
   }
+}
+
+calculatingIMC(int weight, double height) {
+  return weight / (height * height);
 }
