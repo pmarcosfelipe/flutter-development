@@ -15,8 +15,10 @@ calculateIMC() {
 
   var imc = weight / (heigth * heigth);
 
-  print(imc);
+  printIMC(imc);
+}
 
+printIMC(imc) {
   if (imc < 18.5) {
     print("Abaixo do Peso");
   } else if (imc > 18.5 && imc < 24.9) {
