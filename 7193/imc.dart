@@ -1,6 +1,10 @@
 import 'dart:io';
 
 main() {
+  calculateIMC();
+}
+
+calculateIMC() {
   print('Digite o seu peso: ');
   var textWeight = stdin.readLineSync();
   var weight = int.parse(textWeight);
