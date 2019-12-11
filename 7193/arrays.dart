@@ -1,7 +1,7 @@
 import 'dart:io';
 
 main() {
-  var nome = [];
+  List<String> nomes = [];
 
   bool condicao = true;
 
@@ -13,10 +13,10 @@ main() {
       print('Programa finalizado!');
       condicao = false;
     } else {
-      nome.add(text);
+      nomes.add(text);
     }
 
-    print(nome);
+    print(nomes);
     print('\n');
   }
 }
