@@ -1,15 +1,16 @@
-main() {
-  for (int x = 0; x < 10; x++) {
-    print("Rodou $x vezes!");
-  }
+import 'dart:io';
 
+main() {
   bool condition = true;
-  int x = 0;
+
   while (condition) {
-    print("Rodou $x vezes!");
-    if (x > 9) {
+    print('Escreva um texto: ');
+    String text = stdin.readLineSync();
+    if (text == 'sair') {
       condition = false;
+      print('Programa finalizado!');
+    } else {
+      print('Você digitou: $text');
     }
-    x++;
   }
 }
