@@ -1,7 +1,8 @@
 import 'dart:io';
 
+List<String> products = [];
+
 main() {
-  List<String> products = [];
   bool condition = true;
 
   while (condition) {
@@ -11,20 +12,26 @@ main() {
       print('Exit Shopping Cart!');
       condition = false;
     } else if (text == 'imprimir') {
-      for (var i = 0; i < products.length; i++) {
-        print("Item $i: ${products[i]} \n");
-      }
+      imprimir();
     } else if (text == 'remover') {
-      print('Qual item deseja remover?');
-      for (var i = 0; i < products.length; i++) {
-        print("Item $i: ${products[i]} \n");
-      }
-      int item = int.parse(stdin.readLineSync());
-      products.removeAt(item);
-      print('Item removido!');
+      remover();
     } else {
       products.add(text);
       print('\x1B[2J\x1B[0;0H');
     }
   }
+}
+
+imprimir() {
+  for (var i = 0; i < products.length; i++) {
+    print("Item $i: ${products[i]} \n");
+  }
+}
+
+remover() {
+  print('Qual item deseja remover?');
+  imprimir();
+  int item = int.parse(stdin.readLineSync());
+  products.removeAt(item);
+  print('Item removido!');
 }
