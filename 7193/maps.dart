@@ -1,30 +1,40 @@
 import 'dart:io';
 
-Map<String, dynamic> cadastro = {};
+List<Map<String, dynamic>> cadastros = [];
 
 main() {
-  // Map<String, dynamic> maps = {
-  //   'name': 'Marcos Felipe',
-  //   'idade': 27,
-  //   'city': 'Maringa',
-  //   'state': 'Parana'
-  // };
+  bool condition = true;
+  print('\x1B[2J\x1B[0;0H');
+
+  while (condition) {
+    print('Digite um "cadastro", "imprimir" ou "sair"');
+    String command = stdin.readLineSync();
+    if (command == 'sair') {
+      print('Programa Finalizado');
+      condition = false;
+    } else if (command == 'cadastro') {
+      create();
+    } else if (command == 'imprimir') {
+      print(cadastros);
+    } else {
+      print('Comando não existe');
+    }
+  }
+}
+
+create() {
+  Map<String, dynamic> cadastro = {};
 
   print('Digite o seu Nome');
-  String name = stdin.readLineSync();
-  cadastro['name'] = name;
+  cadastro['name'] = stdin.readLineSync();
 
   print('Digite a sua Idade');
-  String age = stdin.readLineSync();
-  cadastro['age'] = age;
+  cadastro['age'] = stdin.readLineSync();
 
   print('Digite a sua Cidade');
-  String city = stdin.readLineSync();
-  cadastro['city'] = city;
+  cadastro['city'] = stdin.readLineSync();
 
   print('Digite o seu Estado');
-  String state = stdin.readLineSync();
-  cadastro['state'] = state;
-
-  print(cadastro);
+  cadastro['state'] = stdin.readLineSync();
+  cadastros.add(cadastro);
 }
