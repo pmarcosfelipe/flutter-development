@@ -1,9 +1,16 @@
-import './human.dart';
+class Person {
+  String name;
+  int age;
+  double weigth;
+  double heigth;
 
-class Person extends Human {
-  String name = 'Marcos';
-  int age = 27;
-  String gender = 'Masculino';
+  double calculateIMC() {
+    double imc = weigth / (heigth * heigth);
 
-  Person({this.name, this.age, this.gender});
+    return imc;
+  }
+
+  bool calculateAge() {
+    return age >= 18 ? true : false;
+  }
 }
