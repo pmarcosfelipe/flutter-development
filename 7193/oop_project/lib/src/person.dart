@@ -4,13 +4,7 @@ class Person {
   double weigth;
   double heigth;
 
-  double calculateIMC() {
-    double imc = weigth / (heigth * heigth);
+  double calculateIMC() => weigth / (heigth * heigth);
 
-    return imc;
-  }
-
-  bool calculateAge() {
-    return age >= 18 ? true : false;
-  }
+  bool calculateAge() => age >= 18;
 }
