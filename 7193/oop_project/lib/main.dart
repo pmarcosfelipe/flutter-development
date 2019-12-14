@@ -1,9 +1,8 @@
 import './src/person.dart';
+import './src/cat.dart';
 
 void main(List<String> arguments) {
-  Person person = Person(name: 'Marcos', age: 27, gender: 'Masculino');
+  Cat cat = Cat(name: 'Ju', noise: 'miau');
 
-  print(person.name);
-  print(person.age);
-  print(person.gender);
+  print('Gato ${cat.name} faz ${cat.noise}');
 }

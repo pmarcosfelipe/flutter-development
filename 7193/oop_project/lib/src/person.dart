@@ -1,4 +1,6 @@
-class Person {
+import './human.dart';
+
+class Person extends Human {
   String name = 'Marcos';
   int age = 27;
   String gender = 'Masculino';
