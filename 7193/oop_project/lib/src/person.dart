@@ -3,9 +3,5 @@ class Person {
   int age = 27;
   String gender = 'Masculino';
 
-  Person(String name, int age, String gender) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-  }
+  Person({this.name, this.age, this.gender});
 }
