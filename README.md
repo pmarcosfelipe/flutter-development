@@ -32,7 +32,13 @@ Below we have the program content of each one:
 
 [balta.io](https://balta.io/)<br>
 [Flutter Mobile Developer](https://balta.io/carreiras/flutter-mobile-developer)<br>
-[7183 - Lógica de Programação com Dart](https://balta.io/cursos/logica-de-programacao-com-dart)
+[7183 - Lógica de programação com Dart](https://balta.io/cursos/logica-de-programacao-com-dart)<br>
+[7184 - Criando seu primeiro App com Flutter](https://balta.io/cursos/criando-seu-primeiro-app-com-flutter)<br>
+[7192 - Flutter Apps: Alcool ou Gasolina](https://balta.io/cursos/flutter-apps-alcool-ou-gasolina)<br>
+[7185 - Dominando Layouts no Flutter](https://balta.io/cursos/dominando-layouts-no-flutter)<br>
+[7193 - Flutter Apps: IMC com Material, Cupertino e BLoC](https://balta.io/cursos/flutter-apps-imc-material-cupertino-bloc)<br>
+[7195 - Flutter Apps: Perfect Eggs](https://balta.io/cursos/flutter-apps-perfect-eggs)<br>
+[7186 - Criando Apps nativas escaláveis com Flutter, BloC e Provider](https://balta.io/cursos/criando-apps-nativas-escalaveis-com-flutter-bloc-provider)
 
 ## :pencil: License
 
