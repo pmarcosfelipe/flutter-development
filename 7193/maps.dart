@@ -1,7 +1,7 @@
 main() {
-  var maps = {
+  Map<String, dynamic> maps = {
     'name': 'Marcos Felipe',
-    'idade': '27',
+    'idade': 27,
     'city': 'Maringa',
     'state': 'Parana'
   };
