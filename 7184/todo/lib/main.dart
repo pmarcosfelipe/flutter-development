@@ -22,7 +22,7 @@ class App extends StatelessWidget {
 class HomePage extends StatefulWidget {
   var items = new List<Item>();
 
-  HamePage() {
+  HomePage() {
     items = [];
     items.add(Item(title: 'Item 1', done: false));
     items.add(Item(title: 'Item 2', done: true));
