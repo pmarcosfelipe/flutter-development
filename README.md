@@ -22,6 +22,26 @@ Below we have the program content of each one:
 - Módulo 9: Programação Linear Modular (6 aulas)
 - Módulo 10: Programação Orientada à Objetos (13 aulas)
 
+### 7184 - Criando seu primeiro App com Flutter
+
+- Módulo 1: Introdução (4 aulas)
+- Módulo 2: Todo App (14 aulas)
+  - Criando o App
+  - Stateless VS Statefull
+  - Material App
+  - Scaffold
+  - Modelando o Item
+  - ListView
+  - CheckboxListTile
+  - SetState
+  - TextFormField
+  - Adicionando um Item
+  - Removendo um Item
+  - Instalando Pacotes
+  - Lendo os Itens
+  - Salvando os Itens
+- Módulo 3: Conclusão (1 aulas)
+
 ## Author
 
 ### :bust_in_silhouette: Marcos Felipe
