@@ -1,8 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter/cupertino.dart';
+import 'dart:convert';
 
 import 'models/item.dart';
 
@@ -40,15 +38,17 @@ class _HomePageState extends State<HomePage> {
   var newTaskCtrl = TextEditingController();
 
   void add() {
-    if (newTaskCtrl.text.isEmpty) return;
     setState(() {
       widget.items.add(Item(title: newTaskCtrl.text, done: false));
+      newTaskCtrl.text = "";
+      save();
     });
   }
 
-  void remove(int index) {
+  void remove(index) {
     setState(() {
       widget.items.removeAt(index);
+      save();
     });
   }
 
@@ -58,12 +58,17 @@ class _HomePageState extends State<HomePage> {
 
     if (data != null) {
       Iterable decoded = jsonDecode(data);
-      List<Item> result = decoded.map((x) => Item.fromJSON(x)).toList();
+      List<Item> result = decoded.map((x) => Item.fromJson(x)).toList();
 
       setState(() {
         widget.items = result;
       });
     }
+  }
+
+  save() async {
+    var prefs = await SharedPreferences.getInstance();
+    await prefs.setString('data', jsonEncode(widget.items));
   }
 
   _HomePageState() {
@@ -98,6 +103,7 @@ class _HomePageState extends State<HomePage> {
               onChanged: (value) {
                 setState(() {
                   item.done = value;
+                  save();
                 });
               },
             ),
