@@ -1,3 +1,4 @@
+import 'package:alcohol_or_gas/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -20,7 +21,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-    );
+        backgroundColor: Theme.of(context).primaryColor,
+        body: ListView(children: <Widget>[Logo()]));
   }
 }
