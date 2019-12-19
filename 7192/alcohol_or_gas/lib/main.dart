@@ -1,4 +1,5 @@
 import 'package:alcohol_or_gas/widgets/input.widget.dart';
+import 'package:alcohol_or_gas/widgets/loading-button.widget.dart';
 import 'package:alcohol_or_gas/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
@@ -29,6 +30,36 @@ class HomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         body: ListView(children: <Widget>[
           Logo(),
+          Container(
+              margin: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(.8),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text(
+                    'Compensa utilizar alcohol',
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
+                      fontSize: 40,
+                      fontFamily: 'Big Shoulders Display',
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  LoadingButton(
+                    busy: false,
+                    invert: true,
+                    func: () {},
+                    text: 'CALCULAR NOVAMENTE',
+                  ),
+                ],
+              )),
           Input(
             ctrl: _gasCtrl,
             label: 'Gas',
@@ -37,24 +68,12 @@ class HomePage extends StatelessWidget {
             ctrl: _alcoholCtrl,
             label: 'Alcohol',
           ),
-          Container(
-              margin: EdgeInsets.all(30),
-              height: 60,
-              decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.8),
-                borderRadius: BorderRadius.circular(60),
-              ),
-              child: FlatButton(
-                child: Text(
-                  'CALCULAR',
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 25,
-                    fontFamily: 'Big Shoulders Display',
-                  ),
-                ),
-                onPressed: () {},
-              ))
+          LoadingButton(
+            busy: true,
+            invert: false,
+            func: () {},
+            text: 'CALCULAR',
+          ),
         ]));
   }
 }
