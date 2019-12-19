@@ -34,7 +34,7 @@ class Success extends StatelessWidget {
           LoadingButton(
             busy: false,
             invert: true,
-            func: () {},
+            func: reset,
             text: 'CALCULAR NOVAMENTE',
           ),
         ],
