@@ -42,6 +42,26 @@ Below we have the program content of each one:
   - Salvando os Itens
 - Módulo 3: Conclusão (1 aulas)
 
+### 7192 - Flutter Apps: Alcool ou Gasolina
+
+- Módulo 1: Introdução (15 aulas)
+  - Apresentação
+  - Startup
+  - Setup
+  - Logo
+  - Criando o Input
+  - Input Widget
+  - Botão Calcular
+  - Exibindo o Resultado
+  - Loading Button
+  - Success Widget
+  - Submit Form
+  - Calculando: Parte 1
+  - Calculando: Parte 2
+  - Animando o Fundo
+  - Conclusão
+- Módulo 2: Conclusão (1 aulas)
+
 ## Author
 
 ### :bust_in_silhouette: Marcos Felipe
